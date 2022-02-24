@@ -81,17 +81,29 @@
           <video class="for-parralax-video layer" autoplay muted loop
             src="./img/My Video3.mp4"  data-speed="5"></video>
             <script>
-              document.addEventListener("mousemove" , parallax);
-              function parallax(e){
-                this.querySelectorAll('.layer').forEach(layer => {
-                  const speed = layer.getAttribute('data-speed')
+              // document.addEventListener("mousemove" , parallax);
+              // function parallax(e){
+              //   this.querySelectorAll('.layer').forEach(layer => {
+              //     const speed = layer.getAttribute('data-speed')
 
-                  const x = (window.innerWidth - e.pageX*speed)/100
-                  const y = (window.innerWidth - e.pageY*speed)/100
+              //     const x = (window.innerWidth - e.pageX*speed)/100
+              //     const y = (window.innerWidth - e.pageY*speed)/100
 
-                  layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-                });
-              }
+              //     layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+              //   });
+              // }
+
+
+
+              window.addEventListener('deviceorientation',function(e){
+                const x = Math.round(e.beta);
+                const y = Math.round(e.gamma);
+                const z = Math.round(e.alpha);
+
+
+
+                document.getElementsByClassName('layer')[0].style.transform = `translateY(-${y}%)`;
+              })
             </script>
         </header>
       </div>
