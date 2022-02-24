@@ -43,7 +43,7 @@
         </a>
       </div>
 
-      <div class="socials col-1 d-flex justify-content-end" data-aos="fade-up" data-aos-duration="1000">
+      <div class="socials soc2 col-1 d-flex justify-content-end" data-aos="fade-up" data-aos-duration="1000">
 
 
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -68,8 +68,8 @@
           <div class="container-fluid2 h-100">
 
 
-            <div class="header-info d-flex align-items-center">
-              <div class="qert" data-aos="fade-up" data-aos-duration="2000" style="z-index: 1; position: relative;">
+            <div class="header-info d-flex">
+              <div class="qert" style="z-index: 1; position: relative;">
                 <h1 class="h1">Turgunoff group</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad maiores molestiae sit
                   asperiores quos, aperiam quam cumque minus facilis.</p>
@@ -78,8 +78,21 @@
             </div>
 
           </div>
-          <video class="for-parralax-video" autoplay muted loop
-            src="./img/Abstract_Red_Neon_Light_Cube_Background_Video,_blinking_Motion_Background.mp4"></video>
+          <video class="for-parralax-video layer" autoplay muted loop
+            src="./img/My Video3.mp4"  data-speed="5"></video>
+            <script>
+              document.addEventListener("mousemove" , parallax);
+              function parallax(e){
+                this.querySelectorAll('.layer').forEach(layer => {
+                  const speed = layer.getAttribute('data-speed')
+
+                  const x = (window.innerWidth - e.pageX*speed)/100
+                  const y = (window.innerWidth - e.pageY*speed)/100
+
+                  layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+                });
+              }
+            </script>
         </header>
       </div>
 
@@ -97,7 +110,8 @@
   <section class="hhg">
     <div class="paper">
       <div class="container-fluid2 for-scroll">
-        <h3 class="h-generals">Sayt o'zi nega kerak</h3>
+        <h3 class="h-generals" data-aos="fade-up"
+        data-aos-duration="1400">Sayt o'zi nega kerak</h3>
 
         <div class="video" data-aos="zoom-out">
           <video class="vid" src="./img/video_2021-12-01_18-04-33.mp4"></video>
@@ -107,7 +121,8 @@
 
     <div class="fg">
       <div class="container-fluid2">
-        <h3 class="h-generals">Biz haqimizda qisqacha</h3>
+        <h3 class="h-generals" data-aos="fade-up"
+        data-aos-duration="1400">Biz haqimizda qisqacha</h3>
 
 
 
@@ -175,7 +190,8 @@
 
   <section class="rocky">
     <div class="container-fluid2">
-      <h3 class="h-generals">Bizning ishlar</h3>
+      <h3 class="h-generals" data-aos="fade-up"
+      data-aos-duration="1400">Bizning ishlar</h3>
 
 
 
@@ -203,7 +219,8 @@
 
   <section>
     <div class="container-fluid2">
-      <h3 class="h-generals">Bizning professionallar</h3>
+      <h3 class="h-generals" data-aos="fade-up"
+      data-aos-duration="1400">Bizning professionallar</h3>
       <div class="owl-carousel padd d-flex">
 
         <div class="card d-flex flex-column align-items-center">
@@ -230,14 +247,16 @@
 
 <section class="for-diz">
   <div class="container-fluid2">
-    <h3 class="h-generals">Sizda yangi loyiha bormi?</h3>
+    <h3 class="h-generals" data-aos="fade-up"
+    data-aos-duration="1400">Sizda yangi loyiha bormi?</h3>
     <a class="btn-pro" href="#">Yangi loyihani boshlash</a>
   </div>
 </section>
 
 
   <section class="map">
-    <h3 class="h-generals fm">Bizning manzil</h3>
+    <h3 class="h-generals fm" data-aos="fade-up"
+    data-aos-duration="1400">Bizning manzil</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11992.503236345961!2d69.2094231!3d41.2843663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1744492f3b9ad2ed!2sTurgunoff%20Group!5e0!3m2!1sru!2s!4v1643723025763!5m2!1sru!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
@@ -248,31 +267,39 @@
         <div class="fath-foot d-flex align-items-center justify-content-between flex-wrap">
             <div class="left-foot col-12 col-sm-3">
                 <p>Turgunoff group-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, vitae?</p>
+                <div class="socials d-flex  flex-wrap">
+  
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+  
+                </div>
             </div>
             <ul class="foot-ul d-flex flex-column align-items-center col-12 col-sm-3">
-
-              <li><a href="#">Home</a></li>
+  
+              <li><a href="./index.html">Home</a></li>
               <li><a href="./aboutus.html">About us</a></li>
               <li><a href="./projects.html">Projects</a></li>
               <li><a href="#">Reviews</a></li>
               <li><a href="./contacts.html">Contact us</a></li>
               <li><a href="./tariflr.html">Tariffs</a></li>
               <li><a href="./faqs.html">FAQs</a></li>
-
+  
             </ul>
-
+  
             <div class="right-foot col-12 col-sm-3">
                 <p>5 Chapanata ko'chasi, Toshkent 100097, O'zbekiston</p>
                 <div class="tels d-flex flex-column align-items-end">
                     <a href="#">+99890 118 98 89</a>
                     <a href="#">+99890 118 98 89</a>
                 </div>
-
+  
             </div>
         </div>
         <p class="inc">Inc.2022</p>
     </div>
-</footer>
+  </footer>
 
 
 
