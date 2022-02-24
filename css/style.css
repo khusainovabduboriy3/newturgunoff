@@ -1215,7 +1215,9 @@ margin: 40px 0 0;
   .socials{
     justify-content: center;
   }
-
+  header video{
+    width: 150%;
+  }
 
   }
   @media(max-width:500px){
