@@ -8,7 +8,21 @@ btn.on('click', function() {
   $('nav ul li').toggleClass('active');
   $('nav ul li a').toggleClass('active');
   $('.body').requestFullscreen();
-});
+}); 
+
+
+$('header').click(function(){
+if($('.menu-flex').hasClass('active2')){
+$('.menu-flex').removeClass('active2');
+$(btn).toggleClass('activerr');
+$(btn).toggleClass('not-active');
+$('body').removeClass('no-active');
+$('nav ul li').removeClass('active');
+$('nav ul li a').removeClass('active');
+}
+})
+
+
 $('.opened-accordion').hide();
 $('#ac1').click(function(){
     $('#op1').toggle(200);
@@ -84,12 +98,16 @@ $(window).scroll(function() {
   if (scroll >= 200) {
     $(".header h1").addClass("active");
     $(".header-info p").addClass("active");
+    $('.for-parralax-video').removeClass('layer');
+    $('.for-parralax-video').addClass('layer2');
   }
   else{
     $(".header h1").removeClass("active");
     $(".header-info p").removeClass("active");
+    $('.for-parralax-video').removeClass('layer2');
+    $('.for-parralax-video').addClass('layer');
   }
-  if (scroll >= 1000) {
+  if (scroll >= 600) {
     $(".respo").addClass("active");
     $(".phone").addClass("active2");
   }
@@ -136,7 +154,7 @@ const controller = new ScrollMagic.Controller();
 
 const scene = new ScrollMagic.Scene({
 triggerElement: ".animationn",
-duration: 2000,
+duration: 1000,
 triggerHook: 0
 })
 
@@ -230,7 +248,7 @@ tween4
 
 
     .to('.line2', 0.3, {
-    ease: Power1.easeInOut, width: "100px"
+    ease: Power1.easeInOut, width: "100%"
     })
     .to('.line3', 1, {
       ease: Power1.easeInOut, height: "100%"
@@ -242,7 +260,7 @@ tween4
 
         const scene4 = new ScrollMagic.Scene({
           triggerElement: ".fg",
-          duration: 1000,
+          duration: 400,
           triggerHook: 0.1
           })
           
@@ -261,10 +279,10 @@ tween5
 
     .to('.slide2', 0.3, {
     ease: Power1.easeInOut, y: "-90%"
-    })
+    }, '-=6')
     .to('.slide3', 1, {
       ease: Power1.easeInOut, y: "-180%"
-      })
+      }, '-=6')
 
 
         const scene5 = new ScrollMagic.Scene({
